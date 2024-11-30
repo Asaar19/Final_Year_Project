@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
 }
 ::-webkit-scrollbar {
   width: 12px;
@@ -59,6 +60,14 @@ p {
   font-size: 16px;
   line-height: 28px;
 }
+:root {
+  --main-color: #1a1a1a;
+  --cyan: #00ffff;
+  --green: #7cfc00;
+  --gray: #1d1d1d;
+  --border: #3e3e3e;
+  --text: #e0e0e0;
+}
 a,
 p,
 h1,
@@ -68,14 +77,9 @@ h4,
 h5,
 h6,
 label {
-  color: #e0e0e0;
+  color: var(--text);
 }
-:root {
-  --main-color: #1a1a1a;
-  --cyan: #00ffff;
-  --green: #7cfc00;
-  --gray: #1d1d1d;
-}
+
 .alert {
   text-align: center;
 }
@@ -134,7 +138,7 @@ header .container {
   gap: 50px;
 }
 .logo {
-  color: #e0e0e0;
+  color: var(--text);
   font-size: 24px;
   font-weight: 600;
   text-decoration: none;
@@ -149,7 +153,7 @@ footer .container {
   padding: 20px 0px;
   text-align: center;
   color: var(--main-color);
-  border-top: 1px solid #3e3e3e;
+  border-top: 1px solid var(--border);
 }
 .container {
   max-width: 1240px;
@@ -168,14 +172,14 @@ footer .container {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
-  background-color: #e0e0e0;
+  background-color: var(--text);
   color: black;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--text);
 }
 .btn:hover {
   background-color: black;
-  color: #e0e0e0;
-  border-color: #e0e0e0;
+  color: var(--text);
+  border-color: var(--text);
 }
 h1 {
   font-size: 50px;
@@ -216,7 +220,7 @@ h4 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 161px);
   padding: 60px 10px 100px 10px;
   display: flex;
   align-items: center;
@@ -237,9 +241,9 @@ h4 {
   padding: 15px;
   width: 100%;
   border-radius: 100px;
-  border: 1px solid #3e3e3e;
+  border: 1px solid var(--border);
   background-color: transparent;
-  color: #e0e0e0;
+  color: var(--text);
   margin-top: 5px;
   font-size: 16px;
 }
@@ -248,7 +252,7 @@ h4 {
   background-color: var(--gray);
   border-radius: 10px;
   padding: 50px 40px;
-  border: 1px solid #3e3e3e;
+  border: 1px solid var(--border);
 }
 
 .formDiv form {
@@ -281,6 +285,7 @@ h4 {
   text-align: center;
   justify-content: center;
   margin-top: 20px;
+  align-items: center;
 }
 .formBottomDiv a {
   font-weight: 600;
@@ -381,7 +386,7 @@ h4 {
   margin-bottom: 10px;
 }
 .results {
-  border: 1px solid #3e3e3e;
+  border: 1px solid var(--border);
   border-radius: 5px;
   background-color: var(--gray);
   padding: 30px;
@@ -394,7 +399,7 @@ h4 {
 }
 .results li {
   margin-bottom: 30px;
-  border-bottom: 1px solid #3e3e3e;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 30px;
 }
 .results li:last-child {
@@ -404,7 +409,7 @@ h4 {
 .analysisPage h2 {
   margin-bottom: 20px;
 }
-.analysisPage p {
+.analysisPage .hero p {
   text-align: center;
   margin-bottom: 30px;
 }
@@ -415,7 +420,7 @@ h4 {
   margin: 0 auto;
   border-radius: 10px;
   text-align: center;
-  border: 1px solid #3e3e3e;
+  border: 1px solid var(--border);
 }
 .analysisFiltersWrapper > div {
   display: flex;
@@ -442,7 +447,7 @@ h4 {
 .analysisBtnWrapper {
   text-align: center;
   margin-bottom: 50px;
-  border-bottom: 1px solid #3e3e3e;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 70px;
 }
 
@@ -498,7 +503,7 @@ h4 {
     justify-content: center;
   }
   nav.headerMenu {
-    background-color: #e0e0e0;
+    background-color: var(--text);
     top: 100%;
     width: 100%;
     transition: all 0.3s;
@@ -508,7 +513,7 @@ h4 {
     padding: 20px;
     position: absolute;
     z-index: 9;
-    background-color: #e0e0e0;
+    background-color: var(--text);
     left: 50%;
     transform: translateX(-50%);
     top: 100%;

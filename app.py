@@ -182,8 +182,6 @@ def save_to_csv(gigs):
     print(f"Data saved to {file_path}")
 
 
-
-
 # Setup Selenium WebDriver
 def setup_selenium_driver():
     options = Options()
